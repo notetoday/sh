@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -s https://raw.githubusercontent.com/notetoday/dnsmasq_sniproxy_install/master/dns > temp_dns.txt
+curl -s -H "Cache-Control: no-cache" https://raw.githubusercontent.com/notetoday/dnsmasq_sniproxy_install/master/dns > temp_dns.txt
 
 # 获取 DNS 列表
 dns_list=$(cat temp_dns.txt)
@@ -26,7 +26,7 @@ if [ "$changes_made" = true ]; then
   # 重新启动网络服务
   systemctl restart dnsmasq
   # 提示操作完成
-  echo "替换完成！服务已重启。"
+  echo "更换完成！服务已重启。"
 else
   echo "内容无变化，无需操作。"
 fi

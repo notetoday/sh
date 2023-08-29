@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -s https://raw.githubusercontent.com/notetoday/dnsmasq_sniproxy_install/master/dns.txt > temp_dns.txt
+curl -s https://raw.githubusercontent.com/notetoday/dnsmasq_sniproxy_install/master/dns > temp_dns.txt
 
 # 获取 DNS 列表
 dns_list=$(cat temp_dns.txt)
